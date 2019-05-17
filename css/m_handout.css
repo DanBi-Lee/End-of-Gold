@@ -1,0 +1,171 @@
+legend {
+    display: none;
+}
+main {
+    width: 600px;
+    max-width: 100%;
+    min-width: 320px;
+    margin: 0 auto;
+}
+
+/*.cover {
+    display: block;
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+    top:0;
+    left:0;
+    z-index: -9999;
+}*/
+.cover{margin-bottom: 20px;}
+
+.card_input {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    padding-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.box_input fieldset {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.card_input li {
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+.card_input li [id^=cardM] {
+    width: 100%;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.card_input li input[id^=cardM] {
+    height: 50px;
+}
+
+.card_input li p {
+    margin-bottom: 12px;
+    font-weight: 700;
+    text-align: left;
+}
+
+.box_input button {
+    display: inline-block;
+    width: 120px;
+    height: 40px;
+    background: #ddd;
+    border-radius: 4px;
+}
+
+.box_input button:first-of-type {
+    margin-right: 10px;
+    background-color: #fa0;
+}
+
+.card_madness {
+    width: 325px;
+    height: 515px;
+    overflow: hidden;
+    box-sizing: border-box;
+    margin: 0 auto;
+    position: relative;
+}
+
+.card_madness .top,
+.card_madness .bottom {
+    text-align: center;
+    position: absolute;
+    color: #fff;
+    background-color: #222;
+    font-style: italic;
+}
+
+.card_madness .top {
+    width: 100%;
+    height: 40px;
+    font-size: 20px;
+    line-height: 40px;
+    top: 0;
+    left: 0;
+    z-index: 20;
+}
+
+.card_madness .bottom {
+    width: 100%;
+    height: 60px;
+    bottom: 0;
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+
+.card_madness .card_tit {
+    display: inline-block;
+    width: 60px;
+    border-right: 2px solid;
+    color: #222;
+    text-align: center;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.card_madness .card_info {
+    width: 100%;
+    height: 100%;
+    background-color: #222;
+    padding: 40px 10px 60px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.card_madness .card_info dt,
+.card_madness .card_info dd div {
+    width: 100%;
+    background-color: #fff;
+    line-height: 40px;
+}
+
+.card_madness .card_info dt {
+    height: 40px;
+    margin-bottom: 4px;
+}
+
+.card_madness .card_info dd {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card_madness .card_info dd div {
+    height: 40px;
+}
+
+.card_madness .card_info dd div:first-of-type {
+    margin-bottom: 10px;
+}
+
+.card_madness .card_info dd div:last-of-type {
+    flex-grow: 1;
+}
+
+.card_madness pre.sma {
+    padding: 10px;
+    box-sizing: border-box;
+    white-space: pre-wrap;
+}
+
+.card_madness span.sma {
+    white-space: pre-wrap;
+    word-break: break-all;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spansma{display: flex;}

@@ -1,0 +1,14 @@
+/* header */
+body{min-width: 325px;}
+.bgg{background: #fa0; color: #fff;}
+#notice{padding: 10px; text-align: center;}
+.gnb, .ho_tab{width: 100%; max-width: 640px; margin: 0 auto; height: auto;}
+.gnb > ul {width: 100%; height: auto; display: flex; background-color: #ddd;}
+.gnb > ul > li { width: 50%; height: 40px; text-align: center; line-height: 40px;}
+.gnb > ul > li.on {background-color: #fff;}
+.howtouse {text-align: center; font-size: 14px; line-height: 1.4rem; color: #999;}
+
+.card_input li:first-child {
+    margin-top: 0;
+}
+.inner_a a{display: block; width: 100%; height: 100%;}

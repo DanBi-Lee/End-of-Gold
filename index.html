@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width">
+    <meta property="og:title" content="황금의 끝자락" />
+    <meta property="og:url" content="http://xn--jj0b77bm4j3vrbiai00f.com/" />
+    <meta property="og:image" content="img/ogimage.png" />
+    <meta property="og:description" content="개인 사이트에 인세인 핸드아웃 관련 기능을 업로드하고 있습니다. 꾸준히 업데이트 예정입니다." />
+    <link rel="stylesheet" href="./css/base/reset.css">
+    <link rel="stylesheet" href="./css/base/common.css">
+    <link rel="stylesheet" href="./css/m_handout.css">
+    <link rel="shortcut icon" href="img/favicon.png">
+    <script src="./script/common/jquery-3.3.1.min.js"></script>
+    <script src="./script/common/html2canvas-0.4.1.min.js"></script>
+    <script src="./script/common/fileSaver-1.3.8.min.js"></script>
+<!--    <script src='//js.zapjs.com/js/download.js'></script>-->
+    <title>황금의끝자락-광기카드</title>
+</head>
+<body>
+    <div id="notice" class="bgg">
+        이 사이트는 크롬에 최적화되어 있습니다. <br> 크롬으로 이용해주세요!
+    </div>
+    <nav class="gnb">
+        <ul class="inner_a">
+            <li class="on">
+                <a href="#">광기카드 생성기</a>
+            </li>
+            <li>
+                <a href="./orpgHO/">Roll20용 핸드아웃</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <article class="box_input">
+            <form action="#">
+                <fieldset>
+                    <legend>아</legend>
+                    <ul class="card_input">
+                        <li>
+                            <p><label for="cardM_title">광기명</label></p>
+                            <p><input type="text" class="list" id="cardM_title" value=""></p>
+                        </li>
+                        <li>
+                            <p><label for="cardM_title2">트리거</label></p>
+                            <p><input type="text" class="list" id="cardM_title2" value=""></p>
+                        </li>
+                        <li>
+                            <p><label for="cardM_title3">광기 내용</label></p>
+                            <p><textarea class="list" id="cardM_title3" cols="30" rows="10"></textarea></p>
+                        </li>
+                    </ul>
+                    <button id="btnSubmit" class="bgg" type="button">이미지 생성</button>
+                    <button type="reset">지우기</button>
+                </fieldset>
+            </form>
+        </article>
+        <div class="cover">
+            <div class="card_madness box_output">
+                <div class="top">Handout</div>
+                <dl class="card_info">
+                    <dt class="spansma"><span class="card_tit">광기</span><span class="sma sma_0"></span></dt>
+                    <dd>
+                        <div class="spansma"><span class="card_tit">트리거</span><span class="sma sma_1"></span></div>
+                        <div>
+                            <pre class="sma"></pre>
+                        </div>
+                    </dd>
+                </dl>
+                <div class="bottom">
+                    이 광기를<br>
+                    스스로 밝힐 수는 없다.
+                </div>
+            </div>
+        </div>
+        <article class="img_output">
+            <ul>
+                <li></li>
+            </ul>
+        </article>
+    </main>
+    <script src="./script/common/common.js"></script>
+    <script src="./script/m_handout.js"></script>
+</body>
+
+</html>
