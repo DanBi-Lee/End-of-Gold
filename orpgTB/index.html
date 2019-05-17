@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width">
+    <meta property="og:title" content="황금의 끝자락" />
+    <meta property="og:url" content="http://xn--jj0b77bm4j3vrbiai00f.com/" />
+    <meta property="og:image" content="../img/ogimage.png" />
+    <meta property="og:description" content="개인 사이트에 인세인 핸드아웃 관련 기능을 업로드하고 있습니다. 꾸준히 업데이트 예정입니다." />
+    <link rel="stylesheet" href="../css/base/reset.css">
+    <link rel="stylesheet" href="../css/base/common.css">
+    <link rel="stylesheet" href="../css/o_table.css">
+    <link rel="shortcut icon" href="../img/favicon.png">
+    <script src="../script/common/jquery-3.3.1.min.js"></script>
+    <script src="../script/common/html2canvas-0.4.1.min.js"></script>
+    <script src="../script/common/fileSaver-1.3.8.min.js"></script>
+    <title>Roll20용 핸드아웃 서식</title>
+</head>
+
+<body>
+    <noscript>javascript실행해야합니다.</noscript>
+    <div id="notice" class="bgg">
+        이 사이트는 크롬에 최적화되어 있습니다. <br> 크롬으로 이용해주세요!
+    </div>
+    <nav class="gnb">
+        <ul class="inner_a">
+            <li>
+                <a href="../">-----</a>
+            </li>
+            <li class="on">
+                <a href="#">----</a>
+            </li>
+        </ul>
+    </nav>
+    <!--    탭메뉴 -->
+    <div class="table_menutab">
+        <ul>
+            <li><button type="button" data-table="mt1">테이블맵</button></li>
+            <li><button type="button" data-table="mt2">세션카드</button></li>
+            <li><button type="button" data-table="mt3">광기뒷면</button></li>
+        </ul>
+    </div>
+
+    <div class="table_menubox">
+        <ul>
+            <li class="mt1">
+                <!--    탭 박스 1-->
+                <div>
+                    <div id="download" class="img_table">
+                        <div class="test">TEST TEXT 헥
+                            <img id="downloadimg" src="../beach-e131b40c2b_1280.jpg" alt="">
+                            <div class="test2">
+                                <div>test</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="output2"></div>
+                    <div id="optionBox">
+                        <div class="tab_option">
+                            <ul>
+                                <li data-table="op1">정보입력</li>
+                                <li data-table="op2">background</li>
+                                <li data-table="op3">꾸미기</li>
+                            </ul>
+                            <div class="op1">
+                                <h3>정보입력</h3>
+                                <form action="#">
+                                    <fieldset>
+                                        <legend>정보입력</legend>
+                                        <ul>
+                                            <li>
+                                                <label for="">타이틀</label><input type="text">
+                                            </li>
+                                            <li>
+                                                <label for="">인원수</label><input type="text">
+                                            </li>
+                                            <li>
+                                                <label for="">싸이클 수</label><input type="text">
+                                            </li>
+                                            <li>
+                                                <label for="">라이터</label><input type="text">
+                                            </li>
+                                        </ul>
+                                    </fieldset>
+                                </form>
+                            </div>
+                            <div class="op2">
+                                <h3>사진선택</h3>
+                                <label>맵, 카드 공통 이미지 적용 <input type="checkbox" name="optionImg" checked></label>
+                                <div>
+                                    <h4>직접 사진 등록</h4>
+                                    <input type="file">
+                                </div>
+                            </div>
+                            <div class="op3"></div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="mt2"></li>
+            <li class="mt3"></li>
+        </ul>
+    </div>
+
+    <!--   탭 박스 2-->
+
+    <!--   탭 박스 3-->
+    <div class="box_side">
+        <div class="side_header">
+            <div class="box_title">
+                <h3>Photo By <a href="">pixabay</a></h3>
+                <button type="button">close</button>
+            </div>
+            <div class="box_search">
+                <form action="" class="form_search">
+                    <fieldset>
+                        <legend>검색</legend>
+                        <input type="search" id="searchQ">
+                        <button type="submit">검색</button>
+
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <div class="box_contents">
+            <ul class="ul_imgs">
+                <!--
+               <li>
+                  <div class="wrap_img" style="background-image: url('https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_150.jpg')">
+                      <a href=""></a>
+                  </div>
+               </li>
+               <li>
+                  <div class="wrap_img">
+                      <a href=""></a>
+                  </div>
+               </li>
+-->
+            </ul>
+        </div>
+    </div>
+    <!--    <script src="../script/common/common.js"></script>-->
+    <div class="filetest">
+        <form action="#">
+            <input type="file">
+        </form>
+    </div>
+    <script src="../script/o_table2.js"></script>
+    <script src="../script/o_table.js"></script>
+</body>
+
+</html>
