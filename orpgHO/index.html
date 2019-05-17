@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width">
+    <meta property="og:title" content="황금의 끝자락" />
+    <meta property="og:url" content="http://xn--jj0b77bm4j3vrbiai00f.com/" />
+    <meta property="og:image" content="../img/ogimage.png" />
+    <meta property="og:description" content="개인 사이트에 인세인 핸드아웃 관련 기능을 업로드하고 있습니다. 꾸준히 업데이트 예정입니다." />
+    <link rel="stylesheet" href="../css/base/reset.css">
+    <link rel="stylesheet" href="../css/base/common.css">
+    <link rel="stylesheet" href="../css/m_handout.css">
+    <link rel="stylesheet" href="../css/o_handout.css">
+    <link rel="shortcut icon" href="../img/favicon.png">
+    <script src="../script/common/jquery-3.3.1.min.js"></script>
+    <script src="../script/common/html2canvas-0.4.1.min.js"></script>
+    <script src="../script/common/fileSaver-1.3.8.min.js"></script>
+    <title>Roll20용 핸드아웃 서식</title>
+</head>
+
+<body>
+    <div id="notice" class="bgg">
+        이 사이트는 크롬에 최적화되어 있습니다. <br> 크롬으로 이용해주세요!
+    </div>
+    <nav class="gnb">
+        <ul class="inner_a">
+            <li>
+                <a href="../">광기카드 생성기</a>
+            </li>
+            <li class="on">
+                <a href="#">Roll20용 핸드아웃</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="ho_tab">
+        <input type="radio" name="kind_of_HO" data-class="hoFront" id="radioF" value="앞면" checked>
+        <label for="radioF">앞면</label>
+        <input type="radio" name="kind_of_HO" data-class="hoBack" id="radioB" value="뒷면">
+        <label for="radioB">뒷면</label>
+    </div>
+    <main>
+        <article id="hoFront" class="box_ho">
+            <article class="box_input">
+                <form action="#" class="ho_front">
+                    <fieldset>
+                        <legend>아</legend>
+                        <ul class="card_input">
+                            <li>
+                                <p><label for="cardM_hotitle">이름</label></p>
+                                <p><input type="text" class="list" id="cardM_hotitle" value=""></p>
+                            </li>
+                            <li>
+                                <p><label for="cardM_hoinfo">개요</label></p>
+                                <p><textarea class="list" id="cardM_hoinfo" cols="30" rows="10"></textarea></p>
+                            </li>
+                        </ul>
+                        <button id="btnSubmit" class="bgg btnSubmit" type="button">복사</button>
+                        <button type="reset">지우기</button>
+                    </fieldset>
+                </form>
+            </article>
+            <div class="cover ho_front">
+                <p>　</p>
+                <div class="ho_wrap" style="claer:both;">
+                    <p class="ho_title">Handout</p>
+                    <div class="inner_hwrap">
+                        <div class="ho_name"> <span class="hname">이름</span><span class="sma"></span></div>
+                        <div class="ho_des">개요</div>
+                        <div class="ho_content">
+                            <pre class="sma"></pre>
+                        </div>
+                    </div>
+                </div>
+                <p>　</p>
+            </div>
+        </article>
+        <article id="hoBack" class="box_ho displaynone">
+            <article class="box_input">
+                <form action="#" class="ho_front">
+                    <fieldset>
+                        <legend>아</legend>
+                        <ul class="card_input">
+                            <li>
+                                <p><label for="cardM_hotitle_b">쇼크</label></p>
+                                <p><input type="text" class="list" id="cardM_hotitle_b" value=""></p>
+                            </li>
+                            <li>
+                                <p><label for="cardM_hoinfo_b">내용</label></p>
+                                <p><textarea class="list" id="cardM_hoinfo_b" cols="30" rows="10"></textarea></p>
+                            </li>
+                        </ul>
+                        <button id="btnSubmit_b" class="bgg btnSubmit" type="button">복사</button>
+                        <button type="reset">지우기</button>
+                    </fieldset>
+                </form>
+            </article>
+            <div class="cover ho_back">
+                <p>　</p>
+                <div class="ho_wrap">
+                    <p class="ho_title">Handout</p>
+                    <div class="inner_hwrap">
+                        <p class="ho_in">비밀</p>
+                        <div class="ho_name"> <span class="hname">쇼크</span><span class="sma"></span></div>
+                        <div class="ho_content"><pre class="sma"></pre></div>
+                        <p class="ho_secret">
+                            이 비밀을 스스로 밝힐 수는 없다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <p>　</p>
+        </article>
+        <div class="howtouse">
+            사용 방법 : 복사 버튼 클릭 후, roll20의 핸드아웃에 내용 붙여넣기 ! <br>
+            ※ '캐릭터'에 넣을 시, 인장을 등록할 때 삐뚤어지니 '핸드아웃'으로 만들어야 함
+        </div>
+    </main>
+    <script src="../script/common/common.js"></script>
+    <script src="../script/o_handout.js"></script>
+</body>
+
+</html>

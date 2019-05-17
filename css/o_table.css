@@ -1,0 +1,14 @@
+/* 사이드바 */
+.box_side{width: 320px; height: auto; position: absolute; top: 0; right: 0; padding-top: 58px; box-sizing: border-box; background-color: #fff; background-clip: content-box;}
+.ul_imgs{height: auto; padding: 6px; box-sizing: border-box;}
+.ul_imgs li{width: 50%; padding: 4px; float: left; box-sizing: border-box; position: relative;}
+.ul_imgs li .wrap_img{width: 100%; padding-top: 60%; background-repeat: no-repeat; background-size: cover; background-position: center; border-radius: 6px; overflow: hidden;}
+.ul_imgs li a{position: absolute; bottom: 4px; width: 100%; display: block; background: #fff; text-align: center; font-size: 12px; opacity: 0.6;}
+
+/* 메인 영역 */
+.img_table{width:300px; height: 200px; background-repeat: no-repeat; background-size: cover; background-position: center; position: relative;}
+
+.img_table img{width: 100%; height: 100%; object-fit: cover; position: absolute;top:0; left:0; opacity: 0.8;}
+.test{position: absolute; top: 0; left: 0; width: 100%; height: 100%; color: #fff; /*background-image: url('../beach-e131b40c2b_1280.jpg');*/ background-color: #fff; z-index: 100; font-size: 20px; background-size: 100%;}
+.test2{position: absolute; top:0; left:0; width: 100%; height: 100%; text-align: center; color: #fff; filter: grayscale(1); background-color: rgba(0,0,0,0.4); font-weight: 600; padding: 10px; box-sizing: border-box;}
+.test2 > div{width: 100%; height: 100%; border-radius: 4px; border: 4px solid rgba(255,255,255,0.8); box-sizing: border-box; text-shadow: 4px 4px 3px rgba(255,255,255,0.8);}
