@@ -1,7 +1,7 @@
 (function ($) {
     $('#loadInfobox').load('./infobox.html');
     $('#loadTable').load('./maptable.html');
-
+    $('#loadSearch').load('./search.html');
     /* 스텝 - 아코디언메뉴 */
     (function () {
         var makeStep = $('.make-step');
