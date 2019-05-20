@@ -34,106 +34,53 @@
             </li>
         </ul>
     </nav>
-    <div class="box_img">
-        <div class="img_header">
-            <div class="box_title">
-                <h3></h3>
-            </div>
-            <div class="box_search">
-                <form action="" class="form_search">
-                    <fieldset>
-                      <p><label>이미지 파일을 업로드하거나 <input type="file" id="fileUpload"></label></p>
-                       <p><label>이미지를 검색해서 클릭! <small>Photo By <a href="">pixabay</a></small><br/><input type="search" id="searchQ"></label><button type="submit">검색</button></p>                    
-                    </fieldset>
-                </form>
-            </div>
-        </div>
-        <div class="box_contents">
-            <ul class="ul_imgs">
-                <!--
-               <li>
-                  <div class="wrap_img" style="background-image: url('https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_150.jpg')">
-                      <a href=""></a>
-                  </div>
-               </li>
-               <li>
-                  <div class="wrap_img">
-                      <a href=""></a>
-                  </div>
-               </li>
--->
-            </ul>
-        </div>
-    </div>
-    <!--    탭메뉴 -->
-    <div class="table_menutab">
-        <ul>
-            <li><button type="button" data-table="mt1">테이블맵</button></li>
-            <li><button type="button" data-table="mt2">세션카드</button></li>
-            <li><button type="button" data-table="mt3">광기뒷면</button></li>
-        </ul>
-    </div>
-    <div class="table_menubox">
-        <ul>
-            <li class="mt1">
-                <!--    탭 박스 1-->
-                <div>
-                    <div id="download" class="img_table">
-                        <div class="test">
-                            <img id="downloadimg" src="" alt="">
-                            <div class="test2">
-                                <div>test</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="output2"></div>
-                    <div id="optionBox">
-                        <div class="tab_option">
-                            <ul>
-                                <li data-table="op1">정보입력</li>
-                                <li data-table="op2">사진밝기</li>
-                                <li data-table="op3">꾸미기</li>
-                            </ul>
-                            <div class="op1">
-                                <h3>정보입력</h3>
-                                <form action="#">
-                                    <fieldset>
-                                        <legend>정보입력</legend>
-                                        <ul>
-                                            <li>
-                                                <label for="">타이틀</label><input type="text">
-                                            </li>
-                                            <li>
-                                                <label for="">인원수</label><input type="text">
-                                            </li>
-                                            <li>
-                                                <label for="">싸이클 수</label><input type="text">
-                                            </li>
-                                            <li>
-                                                <label for="">라이터</label><input type="text">
-                                            </li>
-                                        </ul>
-                                    </fieldset>
-                                </form>
-                            </div>
-                            <div class="op2">
-                                <h3>이미지 밝기</h3>
-                            </div>
-                            <div class="op3"></div>
-                        </div>
-                    </div>
-                </div>
+    <main>
+        <ul class="make-step">
+            <li>
+                <dl>
+                    <dt><button>1단계 : 세션 정보 입력</button></dt>
+                    <dd id="loadInfobox" class="show"></dd>
+                </dl>
             </li>
-            <li class="mt2"></li>
-            <li class="mt3"></li>
+            <li>
+                <dl>
+                    <dt><button>2단계 : 배경 이미지 선택</button></dt>
+                    <dd>
+                        <div>
+                            <ul class="step2_menu">
+                                <li>
+                                   <input type="radio" name="kind_of_howf" data-class="loadSearch" id="searchF" value="이미지검색" checked="">
+                                    <label for="searchF">이미지 검색(pixabay)</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="kind_of_howf" data-class="loadFileup" id="uploadF" value="뒷면">
+                                    <label for="uploadF">직접 파일 등록</label>
+                                </li>
+                            </ul>
+                            <ul class="step2_box">
+                                <li id="loadSearch"></li>
+                                <li id="loadFileup"></li>
+                            </ul>
+                        </div>
+                    </dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt><button>3단계 : 세부 옵션 선택</button></dt>
+                    <dd>
+                        아 어카지
+                    </dd>
+                </dl>
+            </li>
         </ul>
-    </div>
+        <div class="preview">
+            <p>미리보기</p>
+            <div id="loadTable">
 
-    <!--   탭 박스 2-->
-
-    <!--   탭 박스 3-->
-
-    <!--    <script src="../script/common/common.js"></script>-->
+            </div>
+        </div>
+    </main>
     <script src="../script/o_table2.js"></script>
     <script src="../script/o_table.js"></script>
 </body>
