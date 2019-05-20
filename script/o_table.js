@@ -1,4 +1,24 @@
+(function ($) {
+    $('#loadInfobox').load('./infobox.html');
+    $('#loadTable').load('./maptable.html');
 
+    /* 스텝 - 아코디언메뉴 */
+    (function () {
+        var makeStep = $('.make-step');
+        var makeStep_dt = makeStep.children('li').children('dl').children('dt');
+        var makeStep_dd = makeStep_dt.siblings('dd');
+        makeStep_dt.on('click', function (e) {
+            e.preventDefault();
+            var _this = $(this); _this.parent('dl').parent('li').siblings().children('dl').children('dt').next('dd').slideUp();
+            _this.next('dd').slideToggle(300);
+        });
+    })();
+})(this.jQuery);
+
+
+
+
+//
 //(function ($) {
 //    var q = '';
 //    var api_url = 'https://pixabay.com/api/';
