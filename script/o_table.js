@@ -1,8 +1,8 @@
 (function ($) {
     $('#loadInfobox').load('./infobox.html');
     $('#loadTable').load('./maptable.html');
-    $('#loadSearch').load('./search.html',imgsearch);
-    $('#loadModalpre').load('./modalpre.html',imgpreview); // 미리보기
+    $('#loadSearch').load('./search.html');
+    $('#loadModalpre').load('./modalpre.html', init); // 미리보기
     /* 스텝 - 아코디언메뉴 */
     
     (function () {
@@ -83,6 +83,10 @@
         tabfunc(op_btn, op_box);
     }
     
+    function init(){
+        imgsearch();
+        imgpreview();
+    }
     
 
 
