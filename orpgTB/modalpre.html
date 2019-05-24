@@ -2,28 +2,62 @@
     <div class="preview">
         <div class="figure">
             <ul class="img-box">
-                <li>1<button type="button" class="btn-download">D</button></li>
-                <li>2<button type="button" class="btn-download">D</button></li>
-                <li>3<button type="button" class="btn-download">D</button></li>
+                <li><img src="#"><button type="button" class="btn-download">D</button></li>
+                <li><img src="#"><button type="button" class="btn-download">D</button></li>
+                <li><img src="#"><button type="button" class="btn-download">D</button></li>
             </ul>
             <ul class="img-btn">
-              <li>t</li>
-              <li>s</li>
-              <li>md</li>
+                <li>t</li>
+                <li>s</li>
+                <li>md</li>
             </ul>
             <button type="button" class="close">x</button>
         </div>
     </div>
     <div class="detailop-box">
         <ul class="op-tap">
-          <li>옵</li>
-          <li>흠</li>
-          <li>흠</li>
+            <li>배경 이미지 선택</li>
+            <li>색상선택</li>
+            <li>흠</li>
         </ul>
         <ul class="op-box">
-          <li>1</li>
-          <li>2</li>
-          <li>3</li>
+            <li>
+                <div>
+                    <ul class="step2_menu">
+                        <li>
+                            <input type="radio" name="kind_of_howf" data-class="loadSearch" id="searchF" value="이미지검색" checked="">
+                            <label for="searchF">이미지 검색</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="kind_of_howf" data-class="loadFileup" id="uploadF" value="뒷면">
+                            <label for="uploadF">직접 파일 등록</label>
+                        </li>
+                    </ul>
+                    <ul class="step2_box">
+                        <li id="loadSearch"></li>
+                        <li id="loadFileup"></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <ul>
+                    <li>
+                        <dl>
+                            <dt><label for="tcolorOption">테이블 색상</label></dt>
+                            <dd>
+                                <input type="color" id="tcolorOption">
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>폰트 색상</dt>
+                            <dd></dd>
+                        </dl>
+                    </li>
+                </ul>
+            </li>
+            <li>3</li>
         </ul>
     </div>
 </div>
