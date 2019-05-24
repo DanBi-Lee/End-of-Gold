@@ -1,10 +1,12 @@
 (function ($) {
     $('#loadInfobox').load('./infobox.html');
     $('#loadTable').load('./maptable.html');
-    $('#loadSearch').load('./search.html');
-    $('#loadModalpre').load('./modalpre.html', init); // 미리보기
+    $('#loadModalpre').load('./modalpre.html', function () {
+        $('#loadSearch').load('./search.html', init);
+    }); // 미리보기
+
     /* 스텝 - 아코디언메뉴 */
-    
+
     (function () {
         var makeStep = $('.make-step');
         var makeStep_dt = makeStep.children('li').children('dl').children('dt');
@@ -16,7 +18,7 @@
             _this.next('dd').slideToggle(300);
         });
     })();
-    
+
     /* 검색 */
     function imgsearch() {
         var q = '';
@@ -44,10 +46,8 @@
                     ul_imgs.find('li').on('click', function () {
                         var _this = $(this);
                         var data_img = _this.attr('data-img');
-                        $('.img_table').css({
-                            'backgroundImage': 'url("' + data_img + '")'
-                        });
-                        $('.img_table').attr('data-img', data_img);
+                        $('.map-imgtag')[0].src = data_img;
+                        convert();
                     });
                 }
             );
@@ -82,12 +82,25 @@
         tabfunc(img_btn, img_box);
         tabfunc(op_btn, op_box);
     }
-    
-    function init(){
+
+    function convert() {
+        html2canvas($('.map-table'), {
+            useCORS: true,
+            onrendered: function (canvas) {
+//                canvas.toBlob(function(blob) {
+//                    saveAs(blob, 'download.png');
+//                });
+                $('.preview').find('.img-box').find('li').eq(0).find('img')[0].src=canvas.toDataURL("image/png");
+            }
+        });
+    }
+
+    function init() {
         imgsearch();
         imgpreview();
+        convert();
     }
-    
+
 
 
 
@@ -157,7 +170,7 @@
 //	var filesArr = Array.prototype.slice.call(files);
 //	filesArr.forEach(function(f){
 //		if(!f.type.match("image.*")){	
-//			alert("확장자는 이미지 확장자만 가능합니다.");
+//			alert("이미지 파일만 올릴 수 있습니다.");
 //			return;
 //		}
 //		sel_file = f;
