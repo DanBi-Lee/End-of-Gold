@@ -18,6 +18,15 @@
             _this.next('dd').slideToggle(300);
         });
     })();
+    /* 정보 입력{ */
+    function inputinfo(){
+        function output(input,output){
+            var inputval = input.val();
+            output.text(inputval);
+        }
+        output($('#titleTb'),$('.title-box'));
+    }
+    /* } 정보입력 끝*/
 
     /* 검색 */
     function imgsearch() {

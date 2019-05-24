@@ -51,7 +51,7 @@ form dd input[type="text"]{width: 100%; height: 50px; font-size: 16px; padding: 
 .map-table .inner-table .table-head .cicle-bar > ul > li {width: 80px; height: 80px; border-left: 0; box-sizing: border-box; line-height: 72px; text-align: center; font-size: 22px; font-weight: 600; color: #fff; text-shadow: 0 0 8px #333;}
 .map-table .inner-table .table-head .cicle-bar > ul > li:nth-child(1){border-radius: 20px 0 0 20px; text-shadow: none;}
 .map-table .inner-table .table-head .cicle-bar > ul > li:last-child{border-radius: 0 20px 20px 0; text-shadow: none;}
-.map-table .inner-table .table-head .title-box{text-align: center; flex-grow: 1; padding-right: 20px; box-sizing: border-box; font-size: 50px; font-weight: 600; text-shadow: 0px 0px 8px rgba(255,255,255,0.6); color: #fa0;}
+.map-table .inner-table .table-head .title-box{text-align: center; flex-grow: 1; padding-right: 20px; box-sizing: border-box; font-size: 50px; font-weight: 600; text-shadow: 0px 0px 4px rgba(255,255,255,0.6); color: #fa0; word-break: keep-all;}
 
 /* table-body */
 .map-table .inner-table .table-body{width:100%; height: 750px; display: flex;}
@@ -72,7 +72,7 @@ form dd input[type="text"]{width: 100%; height: 50px; font-size: 16px; padding: 
   /*infobox*/
 .map-table .inner-table .table-body .info-box{width: auto; height:100%; flex-grow:1; margin-left: 12px;}
 .map-table .inner-table .table-body .info-box div{margin-top: 45px; border-radius: 20px 0 20px 20px; position: relative; box-sizing: border-box;}
-.map-table .inner-table .table-body .info-box div.after{width: 120px; height: 40px; position: absolute; top:-84px; right: -4px; border-radius: 20px 20px 0 0; text-align: center; line-height: 40px;}
+.map-table .inner-table .table-body .info-box div.after{width: 120px; height: 40px; position: absolute; top:-86px; right: -4px; border-radius: 20px 20px 0 0; text-align: center; line-height: 40px;}
 .map-table .inner-table .table-body .info-box .ho-box{width: 100%; height: 290px;}
 .map-table .inner-table .table-body .info-box .battle-box{width:100%; height: 370px;}
 .map-table .inner-table .table-body .info-box .battle-box ul{width:100%; height:100%; display: flex; flex-wrap: wrap; border-radius: 20px 0 20px 20px; overflow: hidden;}
@@ -93,7 +93,8 @@ form dd input[type="text"]{width: 100%; height: 50px; font-size: 16px; padding: 
 /* } 맵 테이블 */
 
 /* search */
-.search-box{padding: 10px; box-sizing: border-box;}
+#loadSearch{width: 100%; height: 100%;}
+.search-box{width:100%; height:100%; padding: 10px; box-sizing: border-box; display: flex; flex-direction: column;}
 .form_search{padding: 0;}
 .search-box h3{text-align: center; padding-top: 10px;}
 .search-box h3 a:hover{color: #fff;}
@@ -102,7 +103,7 @@ form dd input[type="text"]{width: 100%; height: 50px; font-size: 16px; padding: 
 .search-box .seach-head fieldset input{flex-grow:1; display: block; border-radius: 8px 0 0 8px; border: 2px solid #fa0; font-size: 16px; border-right: 0;}
 .search-box .seach-head fieldset button{width: 80px; height: 50px; display: block; background-color: #fff; border-radius: 0 8px 8px 0; border: 2px solid #fa0; color: #fa0; font-weight: 600; font-size: 1rem;}
 
-.seach-contents{width: 100%; height: 400px; border: 1px solid #fa0; box-sizing: border-box; border-top: 0; border-radius: 0 0 8px 8px; overflow: auto; padding: 10px;}
+.seach-contents{width: 100%; height: auto; max-height: 315px; border: 1px solid #fa0; box-sizing: border-box; border-top: 0; border-radius: 0 0 8px 8px; overflow: auto; padding: 10px; flex-grow:1;}
 .seach-contents ul{width:100%; height: auto; display: flex; justify-content: space-between; flex-wrap: wrap;}
 .seach-contents ul li{width: 49.2%; padding-top: 30%; margin-bottom: 10px; border-radius: 8px; position: relative; overflow: hidden; border: 2px solid #ccc; cursor: pointer; box-sizing:border-box;}
 .seach-contents ul li:nth-cild(2n){margin-right: 0;}
@@ -112,7 +113,7 @@ form dd input[type="text"]{width: 100%; height: 50px; font-size: 16px; padding: 
 
 /* preview */
 .modal-bg{position: fixed; top:0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.8); display: flex; padding: 10px;box-sizing: border-box; flex-direction: column; justify-content: center; align-items: center;}
-.preview{width: 100%; max-width: 640px; min-width: 300px; height: 40%; background-color: #fff;}
+.preview{width: 100%; max-width: 640px; min-width: 300px; height: 40%; max-height:374px; background-color: #fff;}
 .preview .figure{width:100%; height: 100%; position: relative;}
 .preview .img-box{width: 100%; height: 100%; position: absoltue; top:0; left:0;}
 .preview .img-box > li{width:100%; height: 100%; position: absolute; top:0; left: 0; padding: 5px; box-sizing: border-box; background-color: #fff;}
@@ -122,7 +123,9 @@ form dd input[type="text"]{width: 100%; height: 50px; font-size: 16px; padding: 
 .preview .img-btn > li{flex-grow: 1; text-align: center; line-height: 30px; cursor: pointer;}
 .preview .close{position: absolute; top:0; right: 0; width: 60px; height: 40px; border: 2px solid #ddd; border-radius: 0 0 0 10px; background-color: rgba(0,0,0,0.5); color: #fff;}
 
-.detailop-box{width: 100%; max-width: 640px; min-width: 300px; height: 50%; background-color: #fff; margin-top: 10px; display: flex; flex-direction: column;}
-.detailop-box .op-tap{width:100%; height: 40px; display: flex;}
-.detailop-box .op-tap>li{flex-grow:1;}
-.detailop-box .op-box{width:100%;}
+.detailop-box{width: 100%; max-width: 640px; min-width: 300px; height: 50%; max-height:520px; background-color: #fff; margin-top: 10px; display: flex; flex-direction: column;}
+.detailop-box .op-tap{width:100%; height: 40px; display: flex; flex-shrink:0;}
+.detailop-box .op-tap>li{height: 100%;}
+.detailop-box .op-box{width:100%; flex-grow:1; flex-shrink:1;}
+.detailop-box .op-box>li{display: none; height:100%;}
+.detailop-box .op-box>li.show{display: block;}
