@@ -2,22 +2,10 @@
     $('#loadInfobox').load('./infobox.html');
     $('#loadTable').load('./maptable.html');
     $('#loadModalpre').load('./modalpre.html', function () {
+        $('#loadSelectColor').load('./select-color.html');
         $('#loadSearch').load('./search.html', init);
     }); // 미리보기
 
-    /* 스텝 - 아코디언메뉴 */
-
-    (function () {
-        var makeStep = $('.make-step');
-        var makeStep_dt = makeStep.children('li').children('dl').children('dt');
-        var makeStep_dd = makeStep_dt.siblings('dd');
-        makeStep_dt.on('click', function (e) {
-            e.preventDefault();
-            var _this = $(this);
-            _this.parent('dl').parent('li').siblings().children('dl').children('dt').next('dd').slideUp();
-            _this.next('dd').slideToggle(300);
-        });
-    })();
     /* 정보 입력{ */
     function inputinfo(){
         function output(input,output){
@@ -27,6 +15,16 @@
         output($('#titleTb'),$('.title-box'));
     }
     /* } 정보입력 끝*/
+    
+    /* 모달창 열기 { */
+    function open_modal(){
+        var modalbox = $('.modal-bg');
+        inputinfo();
+        convert();
+        modalbox.show();
+    }
+    $('.open-modal').on('click',open_modal);
+    /* } 모달창 열기 */
 
     /* 검색 */
     function imgsearch() {
@@ -55,6 +53,8 @@
                     ul_imgs.find('li').on('click', function () {
                         var _this = $(this);
                         var data_img = _this.attr('data-img');
+                        _this.siblings().removeClass('onborder');
+                        _this.addClass('onborder');
                         $('.map-imgtag')[0].src = data_img;
                         convert();
                     });
@@ -74,13 +74,15 @@
         var op_btn = $('.op-tap');
 
         function tabfunc(btn, box) {
-            var btn_li = btn.find('li');
-            var box_li = box.find('li');
+            var btn_li = btn.children('li');
+            var box_li = box.children('li');
             btn_li.on('click', function (e) {
                 e.preventDefault();
                 var _this = $(this);
                 var _index = _this.index();
+                _this.siblings().removeClass('onfa0');
                 box_li.eq(_index).siblings().hide();
+                _this.addClass('onfa0');
                 box_li.eq(_index).show();
             });
         }
