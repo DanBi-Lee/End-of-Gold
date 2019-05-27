@@ -1,8 +1,11 @@
 (function ($) {
     $('#loadInfobox').load('./infobox.html');
     $('#loadTable').load('./maptable.html');
+    $('#loadSCard').load('./scard.html');
+    $('#loadMCard').load('./mcard.html');
     $('#loadModalpre').load('./modalpre.html', function () {
         $('#loadSelectColor').load('./select-color.html');
+        $('#loadSelectFonts').load('./select-fonts.html');
         $('#loadSearch').load('./search.html', init);
     }); // 미리보기
 
@@ -20,7 +23,7 @@
     function open_modal(){
         var modalbox = $('.modal-bg');
         inputinfo();
-        convert();
+        drawprview();
         modalbox.show();
     }
     $('.open-modal').on('click',open_modal);
@@ -55,8 +58,12 @@
                         var data_img = _this.attr('data-img');
                         _this.siblings().removeClass('onborder');
                         _this.addClass('onborder');
-                        $('.map-imgtag')[0].src = data_img;
-                        convert();
+//                        $('.map-imgtag')[0].src = data_img;
+//                        $('.map-imgtag').eq(1)[0].src = data_img;
+                        $('.map-imgtag').each(function(i){
+                            $('.map-imgtag').eq(i)[0].src = data_img;
+                        })
+                        drawprview();
                     });
                 }
             );
@@ -93,23 +100,29 @@
         tabfunc(img_btn, img_box);
         tabfunc(op_btn, op_box);
     }
-
-    function convert() {
-        html2canvas($('.map-table'), {
+    /* img로 바꾸기 */
+    function convert(ori, img) {
+        html2canvas($(ori), {
             useCORS: true,
             onrendered: function (canvas) {
 //                canvas.toBlob(function(blob) {
 //                    saveAs(blob, 'download.png');
 //                });
-                $('.preview').find('.img-box').find('li').eq(0).find('img')[0].src=canvas.toDataURL("image/png");
+                $('.preview').find('.img-box').find('li').eq(img).find('img')[0].src=canvas.toDataURL("image/png");
             }
         });
+    }
+    
+    function drawprview(){
+        convert('.map-table', 0);
+        convert('.scard', 1);
+        convert('.mcard', 2);
     }
 
     function init() {
         imgsearch();
         imgpreview();
-        convert();
+        drawprview();
     }
 
 

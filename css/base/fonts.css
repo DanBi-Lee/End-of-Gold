@@ -1,0 +1,23 @@
+/*월인석보체 - Wolin.woff*/
+@font-face { font-family: 'Wolin'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_three@1.4/Wolin.woff') format('woff'); font-weight: normal; font-style: normal; }
+/*EBS훈민정음 - EBSHunminjeongeum.woff*/
+@font-face { font-family: 'EBSHunminjeongeumSBA'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/EBSHunminjeongeum.woff') format('woff'); font-weight: normal; font-style: normal; }
+/*스텐실 - stencil.woff*/
+@font-face { font-family: 'stencil'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/stencil.woff') format('woff'); font-weight: normal; font-style: normal; }
+/*나눔스퀘어라운드 - NanumSquareRound.woff*/
+@font-face { font-family: 'NanumSquareRound'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff'); font-weight: normal; font-style: normal; }
+/*명조*/
+/*산돌국대떡볶이체 - SDKukdetopokki.woff*/
+@font-face { font-family: 'SDKukdetopokki'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SDKukdetopokki.woff') format('woff'); font-weight: normal; font-style: normal; }
+/*이순신체 - YiSunShinRegular.woff*/
+@font-face { font-family: 'YiSunShinRegular'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/YiSunShinRegular.woff') format('woff'); font-weight: normal; font-style: normal; }
+/*경기천년바탕 - GyeonggiBatang.woff*/
+@font-face { font-family: 'GyeonggiBatang'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GyeonggiBatang.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+/*손글씨*/
+/*꽃길 - SangSangFlowerRoad.woff*/
+/*어비송체*/
+@font-face { font-family: 'UhBeesong'; src: url('../../fonts/UhBeesong.woff') format('woff'); font-weight: normal; font-style: normal; } 
+/*헬스셋 조릿대체*/
+@font-face { font-family: 'HealthsetBambooStd'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.0/HealthsetBambooStd.woff') format('woff'); font-weight: normal; font-style: normal; }
+
