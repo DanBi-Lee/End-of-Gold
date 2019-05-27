@@ -1,6 +1,9 @@
+html, body{width: 100%; height: auto; overflow: auto;}
+body{overflow:hidden;}
 /*main{padding-bottom: 260px;}*/
 /* 만들기 순서 */
-ul[class^="make-step"] > li {margin-bottom: 20px; margin-top: 20px;}
+ul[class^="make-step"] > li:first-child{margin-top: 20px;}
+ul[class^="make-step"] > li:last-child{margin-bottom: 40px;}
 ul[class^="make-step"] > li > dl > dt{width:100%; height: 50px; border: 4px solid #fa0; border-radius: 10px; box-sizing: border-box;}
 ul[class^="make-step"] > li > dl > dt > button {width:100%; height: 100%; color: #fa0}
 ul[class^="make-step"] > li > dl > dd{display: none;}
@@ -15,6 +18,7 @@ input[name="kind_of_howf"]{display: none;}
 input[name="kind_of_howf"], input[name="kind_of_howf"]+label{cursor: pointer;}
 
 /* 정보 입력 란 */
+#loadInfobox form{padding-bottom: 10px;}
 form{padding: 20px;}
 legend {display: block; width:1px; height: 1px; position: absolute; top: -999999px; left: -999999px; z-index: -999999; overflow: hidden;}
 form li{margin-bottom: 20px;}
@@ -25,6 +29,7 @@ form dd input[type="text"]{width: 100%; height: 50px; font-size: 16px; padding: 
 .modal-bg{position: absolute; top:0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.95);}
 
 /* 미리보기 */
+#loadTable, #loadSCard, #loadMCard{position: absolute; top: 0;}
 
 /*
 .preview{width: 100vw; transform: scale(0.25); transform-origin: 0 100%; position: fixed; left:0; bottom:0; font-size: 100px; display: none;}
@@ -35,11 +40,14 @@ form dd input[type="text"]{width: 100%; height: 50px; font-size: 16px; padding: 
 /*.preview{width:1px; height: 1px; overflow: hidden;}*/
 
 /* 맵 테이블 { */
-/*.mk-imgdom{width:1px; height: 1px; overflow: hidden; opacity:0;}*/
+/*.mk-imgdom, .mcard{width:1px; height: 1px; opacity:0; position: absolute; top:0; left:0;}*/
+.mk-imgdom{ position: relative; left: 0; z-index: -999; opacity: 0;}
+.mk-imgdom .map-imgtag{width:auto; height: 100%; object-fit: cover; transform: translate(-50%, -50%); position: absolute; top: 50%; left: 50%;}
+.mcard, .map-table{}
+/*.mk-imgdom .map-imgtag + div{position:absolute; top:0; left:0;}*/
 
 .img_table{background-size: cover; background-repeat: no-repeat;}
 .map-table{width: 1260px; height: 910px; background-color: transparent; background-repeat: no-repeat; background-size: cover; position: relative;}
-.map-table .map-imgtag{width:100%; height: 100%; object-fit: cover;}
 .map-table .maptable-detail{width: 100%; height:100%; padding: 20px; box-sizing: border-box; background-color: rgba(255,255,255,0.2); position: absolute; top:0; left:0;}
 .map-table .inner-table{width: 100%; height: 100%;}
 
@@ -139,3 +147,21 @@ form dd input[type="text"]{width: 100%; height: 50px; font-size: 16px; padding: 
 #loadSelectColor > ul{width:100%; height: 100%; padding: 4px; box-sizing: border-box;}
 
 .onfa0{background-color: #fa0; color: #fff;}
+
+/* 세션카드 {*/
+.scard{width:1040px; height: 640px; background-color: #ddd; position: relative;}
+.scard .scard-detail{display: flex; width:100%; height:100%; justify-content: center;}
+.scard .scard-detail2{width: auto; height: auto; padding: 40px; box-sizing: border-box;}
+.scard {text-align: center; position: relative;}
+.scard .scard-cicle{position: absolute; top: 60px; left: 60px;}
+.scard .title-box{margin-top: 12%; font-size: 80px; line-height: 95%; word-break: keep-all; font-weight: 600;}
+.scard .plgm-name{display: inline-block; background-color: #fa0; padding: 2px 8px; margin-top: 20px; font-size: 20px;}
+.scard .scard-date{margin-top: 10px;}
+.scard .scard-writer{position: absolute; bottom: 60px; right: 60px;}
+/*} 세션카드 */
+
+/*광기카드 {*/
+.mcard{width:315px; height: 515px; background-color: #000; position: relative;}
+.mcard .mcard-detail{width:100%; height: 100%; background-color: rgba(255,255,255,0.3); display: flex; justify-content: center; align-items: center; padding: 40px; box-sizing: border-box; position: absolute; top:0; left:0;}
+.mcard .mcard-detail .title-box{margin-top: -20%; font-weight: 600; color: #fff; font-size: 40px; text-align: center; word-break: keep-all; text-shadow: 0 0 5px;}
+/*} 광기카드*/
