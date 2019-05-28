@@ -148,11 +148,11 @@ form dd input[type="text"]{width: 100%; height: 50px; font-size: 16px; padding: 
 /* 세션카드 {*/
 .scard{width:1040px; height: 640px; background-color: #ddd; position: relative;}
 .scard .scard-detail{display: flex; width:100%; height:100%; justify-content: center;}
-.scard .scard-detail2{width: auto; height: auto; padding: 40px; box-sizing: border-box;}
+.scard .scard-detail2{width: 100%; height: 100%; padding: 100px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: center; align-items: center;}
 .scard {text-align: center; position: relative;}
 .scard .scard-cycle{position: absolute; top: 60px; left: 60px;}
-.scard .title-box{margin-top: 12%; font-size: 80px; line-height: 95%; word-break: keep-all; font-weight: 600;}
-.scard .plgm-name{display: inline-block; background-color: #fa0; padding: 2px 8px; margin-top: 20px; font-size: 20px;}
+.scard .title-box{font-size: 80px; line-height: 95%; word-break: keep-all; font-weight: 600; margin-top: -10%; text-shadow: 0 0 6px; color: #fff;}
+.scard .plgm-name{display: inline; background-color: #fa0; padding: 2px 24px; margin-top: 20px; font-size: 20px; width: auto;}
 .scard .scard-date{margin-top: 10px;}
 .scard .scard-writer{position: absolute; bottom: 60px; right: 60px;}
 /*} 세션카드 */
@@ -160,7 +160,7 @@ form dd input[type="text"]{width: 100%; height: 50px; font-size: 16px; padding: 
 /*광기카드 {*/
 .mcard{width:315px; height: 515px; background-color: #000; position: relative;}
 .mcard .mcard-detail{width:100%; height: 100%; background-color: rgba(255,255,255,0.3); display: flex; justify-content: center; align-items: center; padding: 40px; box-sizing: border-box; position: absolute; top:0; left:0;}
-.mcard .mcard-detail .title-box{margin-top: -20%; font-weight: 600; color: #fff; font-size: 40px; text-align: center; word-break: keep-all; text-shadow: 0 0 5px;}
+.mcard .mcard-detail .title-box{margin-top: -20%; font-weight: 600; color: #000; font-size: 40px; text-align: center; word-break: keep-all; text-shadow: 0 0 4px;}
 /*} 광기카드*/
 
 /* 스타일 묶음 {*/
