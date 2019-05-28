@@ -185,7 +185,8 @@
     function downloadImg(){
         var btnDown = $('.btn-download');
         btnDown.on('click',_down);
-        function _down() {
+        function _down(e) {
+            e.preventDefault();
             var _this = $(this);
             var _index = _this.parent('li').index();
             var ori = ['.map-table', '.scard','.mcard'];

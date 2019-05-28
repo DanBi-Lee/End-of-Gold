@@ -170,3 +170,12 @@ form dd input[type="text"]{width: 100%; height: 50px; font-size: 16px; padding: 
 .sshadow-box{box-shadow: 0px 0px 8px #fa0;}/*그림자 색 묶음*/
 .text-c{color:#fff; font-size: 18px; font-weight: 600;}/*폰트색 묶음*/
 /* } 스타일 묶음*/
+
+/* 색상선택 { */
+.select-color{padding: 10px; box-sizing: border-box; text-align: center; overflow: auto;}
+.select-color > li {padding: 8px; margin: 10px; border: 1px solid #fa0; border-radius: 8px;}
+.select-color > li > dl > dt,
+.select-color > li > dl > dd{display: inline-block;}
+.select-color > li > dl > dt{font-weight: 600; margin-right: 10px;}
+.select-color > li > dl > dd > input{width: 100px;}
+/* } 색상선택 */
