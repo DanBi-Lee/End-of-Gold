@@ -29,7 +29,7 @@
     $('.open-modal').on('click',open_modal);
     /* } 모달창 열기 */
 
-    /* 검색 */
+    /* 검색 {*/
     function imgsearch() {
         var q = '';
         var api_url = 'https://pixabay.com/api/';
@@ -69,7 +69,34 @@
             );
         });
     }
+    /* } 검색 */
+    
+    /* 파일 업로드 { */
+    function imgFile(){
+        var file_input = $('#imgFile');
+        var map_imgtag = $('.map-imgtag');
+        file_input.on('change', handleImgFileSelect);
+        function handleImgFileSelect(e) {
+            var files = e.target.files;
+            var filesArr = Array.prototype.slice.call(files);
+            filesArr.forEach(function (f) {
+                if (!f.type.match("image.*")) {
+                    alert("이미지 파일만 올릴 수 있습니다.");
+                    return;
+                }
+                sel_file = f;
 
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    map_imgtag.attr('src', e.target.result);
+                }
+                reader.readAsDataURL(f);
+            });
+            setTimeout(drawprview, 100);
+        }  
+    }
+    /* } 파일 업로드 */
+    
     /* 미리보기 */
     function imgpreview() {
         /*미리보기탭*/
@@ -112,22 +139,30 @@
             }
         });
     }
-    
     function drawprview(){
         convert('.map-table', 0);
         convert('.scard', 1);
         convert('.mcard', 2);
     }
-
+    /* 다운로드 {*/
+    function downloadImg(){
+        var btnDown = $('.btn-download');
+        btnDown.on('click',_down);
+        function _down(){
+            var _this = $(this);
+            var img = _this.siblings('img');
+            _this[0].href = img[0].src;
+            //_this.click();
+        }
+    }
+    /*} 다운로드 */
     function init() {
         imgsearch();
+        imgFile();
         imgpreview();
         drawprview();
+        downloadImg();
     }
-
-
-
-
 })(this.jQuery);
 
 
