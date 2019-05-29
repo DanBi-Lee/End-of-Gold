@@ -8,6 +8,39 @@
         $('#loadSelectFonts').load('./select-fonts.html');
         $('#loadSearch').load('./search.html', init);
     }); // 미리보기
+    /* 폰트변경 { */
+    function changeFont(){
+        function mkfontlist(){
+            var _parent_ul = $('.font-box ul');
+            var _template = '';
+            for(var i=0; i< fontlist.length; i++){
+                _template += '<li data-font="'+ fontlist[i].code +'" style="font-family:' + fontlist[i].code + '">'+ fontlist[i].name +'</li>';
+            }
+            _parent_ul.html(_template);
+        }
+        function _change(input,output) {
+            input.siblings().removeClass('onfa0');
+            input.addClass('onfa0');
+            var _font = input.attr('data-font');
+            output.css('fontFamily', _font);
+            drawprview();
+        }
+        mkfontlist();
+        var mainText = $('.main-text');
+        var mainText_li = mainText.children('li');
+        var subText = $('.sub-text');
+        var subText_li = subText.children('li');
+        mainText_li.on('click',function(){
+            var input = $(this);
+            _change(input,$('.title-box'));
+        });
+        subText_li.on('click',function(){
+            var input = $(this);
+            _change(input,$('.infotext-c'));
+        });
+    }
+    /* } 폰트변경 */
+    
     /* 정보 입력{ */
     function inputinfo(){
         function output(input,output){
@@ -27,7 +60,7 @@
             var inputcount = input.val();
             var temp = '';
             for(var i=1; i<=inputcount; i++){
-                temp += '<li class="scolor-box sshadow-box">\
+                temp += '<li class="scolor-innerbox sshadow-box">\
                             <div class="pc-name sborder-color-box text-c">PC'+i+'</div>\
                             <div class="pc-fig sboder-box"></div>\
                             <div class="pc-item sborder-color-box">\
@@ -74,8 +107,9 @@
             e.preventDefault();
             q = $('#searchQ').val();
             q = q.replace(' ', '+');
+            per_page = 39;
             $.ajax({
-                url: api_url + '?key=' + api_key + '&q=' + q,
+                url: api_url + '?key=' + api_key + '&q=' + q + '&per_page=' + per_page,
                 dataType: 'jsonp'
             }).done(
                 function (data) {
@@ -88,6 +122,7 @@
                </li>';
                     });
                     ul_imgs.html(template);
+                    $('.seach-contents').scrollTop(0);
                     ul_imgs.find('li').on('click', function () {
                         var _this = $(this);
                         var data_img = _this.attr('data-img');
@@ -131,10 +166,27 @@
     }
     /* } 파일 업로드 */
     /* 칼라변경 {*/
-    function changeColor(){
-        function colorfunc(input, output){
-            /*작업중...*/
+    function changeColor() {
+        function _change(input, output, prop, option) {
+            var option = option||'';
+            var _color = input.val() + option;
+            output.css(prop, _color);
+            drawprview();
         }
+        $('#bgColor').on('input', function () {
+            _change($(this), $('.scolor-box'), 'backgroundColor', '55');
+        });
+        $('#lineColor').on('input', function(){
+            _change($(this), $('.sboder-box'), 'borderColor');
+            _change($(this), $('.sborder-color-box'), 'backgroundColor');
+        });
+        $('#fontColor').on('input', function(){
+            _change($(this), $('.text-c'), 'color');
+        });
+        $('#titlefontColor').on('input', function () {
+            _change($(this), $('.infotext-c'), 'color');
+            _change($(this), $('.title-box'), 'color');
+        });
     }
     /*} 칼라변경 */
     /* 미리보기 */
@@ -166,6 +218,7 @@
         });
         tabfunc(img_btn, img_box);
         tabfunc(op_btn, op_box);
+        tabfunc($('.font-tab'), $('.font-box'));
     }
     /* img로 바꾸기 */
     function convert(ori, img) {
@@ -205,6 +258,8 @@
     function init() {
         imgsearch();
         imgFile();
+        changeColor();
+        changeFont();
         imgpreview();
         downloadImg();
     }
