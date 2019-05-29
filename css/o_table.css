@@ -8,7 +8,6 @@ ul[class^="make-step"] > li > dl > dt{width:100%; height: 50px; border: 4px soli
 ul[class^="make-step"] > li > dl > dt > button {width:100%; height: 100%; color: #fa0}
 ul[class^="make-step"] > li > dl > dd{display: none;}
 ul[class^="make-step"] > li > dl > dd.show{display: block;}
-
 /* step2 */
 .step2_menu{text-align: center; margin-top: 20px;}
 .step2_menu li{text-align: center; padding: 5px; display: inline;}
@@ -16,7 +15,6 @@ input[name="kind_of_howf"]:checked+label{color:#fff; font-weight: bold; font-siz
 input[name="kind_of_howf"]+label{border: 2px solid; padding: 5px 10px;border-radius: 10px; color: #fff; background-color: #bbb;}
 input[name="kind_of_howf"]{display: none;}
 input[name="kind_of_howf"], input[name="kind_of_howf"]+label{cursor: pointer;}
-
 /* 정보 입력 란 */
 #loadInfobox form{padding-bottom: 10px;}
 form{padding: 20px;}
@@ -30,7 +28,6 @@ form dd input[type="text"]{width: 100%; height: 50px; font-size: 16px; padding: 
 
 /* 미리보기 */
 #loadTable, #loadSCard, #loadMCard{position: absolute; top: 0;}
-
 /*
 .preview{width: 100vw; transform: scale(0.25); transform-origin: 0 100%; position: fixed; left:0; bottom:0; font-size: 100px; display: none;}
 .preview > p{width: 1260px; background-color: #fa0; color:#fff; padding: 10px; box-sizing: border-box; text-align: center; border-radius: 300px 300px 0 0;}
@@ -49,17 +46,17 @@ form dd input[type="text"]{width: 100%; height: 50px; font-size: 16px; padding: 
 
 .img_table{background-size: cover; background-repeat: no-repeat;}
 .map-table{width: 1260px; height: 910px; background-color: transparent; background-repeat: no-repeat; background-size: cover; position: relative;}
-.map-table .maptable-detail{width: 100%; height:100%; padding: 20px; box-sizing: border-box; background-color: rgba(255,255,255,0.2); position: absolute; top:0; left:0;}
+.map-table .maptable-detail{width: 100%; height:100%; padding: 20px; box-sizing: border-box; position: absolute; top:0; left:0;}
 .map-table .inner-table{width: 100%; height: 100%;}
 
 /* table-head */
 .map-table .inner-table .table-head{width: 100%; height: 120px; display: flex; align-items: center;}
 .map-table .inner-table .table-head .cycle-bar{width: auto; height: auto; border-radius: 20px;}
 .map-table .inner-table .table-head .cycle-bar > ul{width: 100%; height: 100%; display: flex; border-radius: 20px; overflow: hidden;}
-.map-table .inner-table .table-head .cycle-bar > ul > li {width: 80px; height: 80px; border-left: 0; box-sizing: border-box; line-height: 72px; text-align: center; font-size: 22px; font-weight: 600; color: #fff; text-shadow: 0 0 8px #333;}
+.map-table .inner-table .table-head .cycle-bar > ul > li {width: 80px; height: 80px; border-left: 0; box-sizing: border-box; line-height: 72px; text-align: center; font-size: 22px; font-weight: 600; text-shadow: 0 0 8px #000; color: #fff;}
 .map-table .inner-table .table-head .cycle-bar > ul > li:nth-child(1){border-radius: 20px 0 0 20px; text-shadow: none;}
 .map-table .inner-table .table-head .cycle-bar > ul > li:last-child{border-radius: 0 20px 20px 0; text-shadow: none;}
-.map-table .inner-table .table-head .title-box{text-align: center; flex-grow: 1; padding-right: 20px; box-sizing: border-box; font-size: 50px; font-weight: 600; text-shadow: 0px 0px 4px rgba(255,255,255,0.6); color: #fa0; word-break: keep-all;}
+.map-table .inner-table .table-head .title-box{text-align: center; flex-grow: 1; padding-right: 20px; box-sizing: border-box; font-size: 50px; font-weight: 600; text-shadow: 0px 0px 4px; color: #fff; word-break: keep-all;}
 
 /* table-body */
 .map-table .inner-table .table-body{width:100%; height: 750px; display: flex;}
@@ -69,7 +66,7 @@ form dd input[type="text"]{width: 100%; height: 50px; font-size: 16px; padding: 
 .map-table .inner-table .table-body .pc-box > ul > li:last-child{margin-right: 0;}
 .map-table .inner-table .table-body .pc-box > ul > li div{width:100%; box-sizing: border-box;}
 .map-table .inner-table .table-body .pc-box > ul > li .pc-name{height: 50px; line-height: 50px; text-indent: 10px; border-radius: 20px 20px 0 0;}
-.map-table .inner-table .table-body .pc-box > ul > li .pc-fig{height: 180px;}
+.map-table .inner-table .table-body .pc-box > ul > li .pc-fig{height: 180px; background-image: url('../img/pcthum.svg'); background-position: center; background-size: 55%;}
 .map-table .inner-table .table-body .pc-box > ul > li .pc-item{height: 80px;}
 .map-table .inner-table .table-body .pc-box > ul > li .pc-item ul{width:100%; height: 100%; display: flex;}
 .map-table .inner-table .table-body .pc-box > ul > li .pc-item ul > li{flex-grow:1; text-align: center; margin-top: 12px;}
@@ -146,29 +143,32 @@ form dd input[type="text"]{width: 100%; height: 50px; font-size: 16px; padding: 
 .onfa0{background-color: #fa0; color: #fff;}
 
 /* 세션카드 {*/
-.scard{width:1040px; height: 640px; background-color: #ddd; position: relative;}
+.scard{width:1040px; height: 640px; position: relative;}
 .scard .scard-detail{display: flex; width:100%; height:100%; justify-content: center;}
 .scard .scard-detail2{width: 100%; height: 100%; padding: 100px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: center; align-items: center;}
 .scard {text-align: center; position: relative;}
 .scard .scard-cycle{position: absolute; top: 60px; left: 60px;}
 .scard .title-box{font-size: 80px; line-height: 95%; word-break: keep-all; font-weight: 600; margin-top: -10%; text-shadow: 0 0 6px; color: #fff;}
-.scard .plgm-name{display: inline; background-color: #fa0; padding: 2px 24px; margin-top: 20px; font-size: 20px; width: auto;}
+.scard .plgm-name{display: inline; padding: 2px 24px; margin-top: 20px; font-size: 20px; width: auto;}
 .scard .scard-date{margin-top: 10px;}
 .scard .scard-writer{position: absolute; bottom: 60px; right: 60px;}
 /*} 세션카드 */
 
 /*광기카드 {*/
-.mcard{width:315px; height: 515px; background-color: #000; position: relative;}
-.mcard .mcard-detail{width:100%; height: 100%; background-color: rgba(255,255,255,0.3); display: flex; justify-content: center; align-items: center; padding: 40px; box-sizing: border-box; position: absolute; top:0; left:0;}
-.mcard .mcard-detail .title-box{margin-top: -20%; font-weight: 600; color: #000; font-size: 40px; text-align: center; word-break: keep-all; text-shadow: 0 0 4px;}
+.mcard{width:315px; height: 515px; position: relative;}
+.mcard .mcard-detail{width:100%; height: 100%; display: flex; justify-content: center; align-items: center; padding: 40px; box-sizing: border-box; position: absolute; top:0; left:0;}
+.mcard .mcard-detail .title-box{margin-top: -20%; font-weight: 600; font-size: 40px; text-align: center; word-break: keep-all; text-shadow: 0 0 4px;}
 /*} 광기카드*/
 
 /* 스타일 묶음 {*/
-.scolor-box{background-color: #ffffff99;}/*투명 묶음*/
-.sboder-box{border: 4px solid #fa0;}/*테두리 색 묶음*/
-.sborder-color-box{background-color: #fa0;}/*불투명색 묶음*/
+.scolor-box{background-color: #00000077;}/*투명 묶음 배경 위 깔린*/
+.scolor-innerbox{background-color: #ffffff66;}/* 맵 테이블 안에 들어가는 */
+.sboder-box{border: 4px solid #fff;}/*테두리 색 묶음*/
+.sborder-color-box{background-color: #fff;}/*불투명색 묶음*/
 .sshadow-box{box-shadow: 0px 0px 8px #fa0;}/*그림자 색 묶음*/
-.text-c{color:#fff; font-size: 18px; font-weight: 600;}/*폰트색 묶음*/
+#mkImgdom .text-c{color:#333; font-size: 18px; font-weight: 600;}/*폰트색 묶음*/
+#mkImgdom .title-box{color: #fff;}
+#mkImgdom .infotext-c{color: #fff; font-size: 22px;}
 /* } 스타일 묶음*/
 
 /* 색상선택 { */
@@ -176,6 +176,17 @@ form dd input[type="text"]{width: 100%; height: 50px; font-size: 16px; padding: 
 .select-color > li {padding: 8px; margin: 10px; border: 1px solid #fa0; border-radius: 8px;}
 .select-color > li > dl > dt,
 .select-color > li > dl > dd{display: inline-block;}
-.select-color > li > dl > dt{font-weight: 600; margin-right: 10px;}
+.select-color > li > dl > dt{font-weight: 600; margin-right: 10px; font-family: 'Nanum Ghodic';}
 .select-color > li > dl > dd > input{width: 100px;}
 /* } 색상선택 */
+
+/* 폰트선택 { */
+#loadSelectFonts{width: 100%; height: 100%; padding: 4px; box-sizing: border-box; display: flex; flex-direction: column;}
+#loadSelectFonts .font-tab{width: 100%; height: 40px; display: flex; text-align: center; background-color: #aaa; color:#fff;}
+#loadSelectFonts .font-tab > li {flex: 1 1; line-height: 40px; cursor: pointer;}
+#loadSelectFonts .font-box{width:100%; flex-grow: 1; overflow: auto; font-size: 24px; font-size: 1.5rem; text-align: center;}
+#loadSelectFonts .font-box > li {width:100%; height: auto; display: none;}
+#loadSelectFonts .font-box > li:first-child{display: block;}
+#loadSelectFonts .font-box > li > ul{padding:10px; box-sizing: border-box;}
+#loadSelectFonts .font-box > li > ul > li{padding: 8px; box-sizing: border-box; border-radius: 8px; border: 1px solid #fa0; margin-bottom: 10px; cursor: pointer;}
+/* } 폰트선택*/
