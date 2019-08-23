@@ -6,7 +6,9 @@
     $('#loadModalpre').load('./modalpre.html', function () {
         $('#loadSelectColor').load('./select-color.html');
         $('#loadSelectFonts').load('./select-fonts.html');
-        $('#loadSearch').load('./search.html', init);
+        $('#loadSearch').load('./search.html', function(){
+            setTimeout(init,1000);
+        });
     }); // 미리보기
     /* 폰트변경 { */
     function changeFont(){
