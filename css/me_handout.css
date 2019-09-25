@@ -1,0 +1,4 @@
+.cardUL { width: 1px; height: 1px; overflow:auto; opacity: 0; position: relative; z-index: -999;}
+.cardUL>li {position: absolute; top:0; left:0;}
+ul, li{ list-style: none; letter-spacing: 4; line-height: 1.4;}
+pre.sma{text-align: center;}
