@@ -57,7 +57,7 @@ function create_zip1() {
     var zip = new JSZip();
     //console.log(arr[i]);
     for (var i = 0; i < cardExcel.length; i++) {
-        zip.file("광기카드_" + i+1 + ".png", arr[i], {
+        zip.file("광기카드_" + ( i + 1 ) + ".png", arr[i], {
             base64: true
         });
         console.log(arr);
