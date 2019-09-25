@@ -67,7 +67,7 @@ function create_zip1() {
     })
         .then(function (content) {
             // see FileSaver.js
-            saveAs(content, "example.zip");
+            saveAs(content, "광기카드샘플.zip");
         });
 }
 function create_zip() {
