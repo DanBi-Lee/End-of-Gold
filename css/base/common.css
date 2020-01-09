@@ -4,7 +4,7 @@ body{min-width: 325px;}
 #notice{padding: 10px; text-align: center;}
 .gnb, .ho_tab{width: 100%; max-width: 640px; margin: 0 auto; height: auto;}
 .gnb > ul {width: 100%; height: auto; display: flex; background-color: #ddd;}
-.gnb > ul > li { width: 50%; height: 40px; text-align: center; line-height: 40px;}
+.gnb > ul > li { width: 50%; height: 40px; text-align: center; line-height: 40px; overflow: hidden;}
 .gnb > ul > li.on {background-color: #fff;}
 .howtouse {text-align: center; font-size: 14px; line-height: 1.4rem; color: #999;}
 
