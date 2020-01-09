@@ -1,0 +1,20 @@
+*{padding: 0; margin: 0;}
+li{list-style: none;}
+.container{max-width: 640px; margin: 60px auto; padding: 20px; box-sizing: border-box; min-width:320px;}
+
+.input {margin-bottom: 20px;}
+.input ul {padding: 20px; box-sizing: border-box;}
+.input li {margin-bottom: 20px;}
+.input li dl {Width: 100%; height: auto; margin-bottom: 10px;}
+.input li input{width: 65%; height: 32px;}
+.input li button{width: 30%; height: 32px; box-sizing: border-box;}
+.input img {width: 200px; height: 200px; margin: 0 auto; display: block; object-fit: contain;}
+.input li [class^="img"]{width: 100%; height: auto; border: 1px solid #fa0; border-radius: 6px; box-sizing: border-box; padding: 20px; box-sizing: border-box;}
+.input li .img-clothes{height: 200px; overflow: auto; }
+.img-clothes li{width:25%; height: auto; float: left; padding: 4px; box-sizing: border-box; position: relative; padding-top: 25%;}
+.input li .img-clothes img{width: 100%; height: 100%; object-fit: contain; position: absolute; top:0; left:0; border: 1px solid #fff; box-sizing: border-box;}
+.img-clothes li > .btn-remove{position: absolute; top: 0; right: 0; background-color: #fff; border: 1px solid; width: 20px; height: 20px; border-radius: 50%; line-height: 16px; color: #f00;}
+
+.out-code code{display: block; padding: 20px; background-color: #222; color: paleturquoise; max-height: 300px; overflow: auto; box-sizing: border-box; border-radius: 5px; word-break: break-all;}
+button.btn{width:200px; height: 40px; margin: 0 auto; display: block; margin-top: 20px;}
+button{cursor: pointer;}
