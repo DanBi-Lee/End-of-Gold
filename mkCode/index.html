@@ -1,0 +1,75 @@
+<!DOCTYPE>
+<html lang="ko-kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box-explain">
+           들어가는 이미지는 600 * 720px입니다.
+           이미지 주소 딸 떄는 확장자가 jpg, png, gif로 끝나게 해주세요!
+        </div>
+        <div class="input">
+            <ul>
+                <li>
+                    <div>
+                        <dl>
+                            <dt>
+                                <label for="bgBg">배경</label>
+                            </dt>
+                            <dd><input type="text" id="bgBg" value="">
+                                <button type="button" class="btn-bgBg">적용하기</button></dd>
+                        </dl>
+                    </div>
+                    <div class="img-bgBg">
+                        <img src="./img/preview_img.png" alt="">
+                    </div>
+                </li>
+                <li>
+                    <div>
+                       <dl>
+                           <dt><label for="bgFig">인물</label></dt>
+                           <dd>
+                               <input type="text" id="bgFig" value="">
+                            <button type="button" class="btn-bgFig">적용하기</button>
+                           </dd>
+                       </dl>
+                    </div>
+                    <div class="img-bgFig">
+                        <img src="./img/preview_img.png" alt="">
+                    </div>
+                </li>
+                <li>
+                    <div>
+                       <dl>
+                           <dt><label for="clothes">의상</label></dt>
+                           <dd>
+                               <input type="text" id="clothes" value="">
+                            <button type="button" class="btn-clothes">추가하기</button>
+                           </dd>
+                       </dl>
+                    </div>
+                    <ul class="img-clothes"></ul>
+                </li>
+            </ul>
+            <button type="button" id="mkConfirm" class="btn"> 코드로 전환 </button>
+        </div>
+        <div class="out-code">
+
+            <code id="sampleMkCode">
+
+            </code>
+
+            <button type="button" id="codeCoppyBtn" class="btn"> 복사하기 </button>
+        </div>
+    </div>
+
+    <script src="./js/convertURL.js"></script>
+</body>
+
+</html>

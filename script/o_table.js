@@ -4,21 +4,77 @@
     $('#loadSCard').load('./scard.html');
     $('#loadMCard').load('./mcard.html');
     $('#loadModalpre').load('./modalpre.html', function () {
-        $('#loadSelectColor').load('./select-color.html');
+        $('#loadSelectColor').load('./select-color.html', changeColor);
         $('#loadSelectFonts').load('./select-fonts.html');
-        $('#loadSearch').load('./search.html', init);
+        $('#loadSearch').load('./search.html', function () {
+            setTimeout(init, 300);
+        });
     }); // 미리보기
     /* 폰트변경 { */
-    function changeFont(){
-        function mkfontlist(){
+    function changeFont() {
+        var fontlist = [
+            {
+                'name': '월인보석체',
+                'code': 'Wolin',
+                type: '고딕'
+            },
+            {
+                'name': 'EBS훈민정음',
+                'code': 'EBSHunminjeongeumSBA',
+                type: '고딕'
+            },
+            {
+                'name': '스텐실',
+                'code': 'stencil',
+                type: '고딕'
+            },
+            {
+                'name': '나눔스퀘어라운드',
+                'code': 'NanumSquareRound',
+                type: '고딕'
+            },
+            {
+                'name': '산돌국대떡볶이체',
+                'code': 'SDKukdetopokki',
+                type: '명조'
+            },
+            {
+                'name': '이순신체',
+                'code': 'YiSunShinRegular',
+                type: '명조'
+            },
+            {
+                'name': '경기천년바탕',
+                'code': 'GyeonggiBatang',
+                type: '명조'
+            },
+            {
+                'name': '꽃길',
+                'code': 'SangSangFlowerRoad',
+                type: '손글씨'
+            },
+            {
+                'name': '어비송체',
+                'code': 'UhBeesong',
+                type: '손글씨'
+            },
+            {
+                'name': '헬스셋 조릿대체',
+                'code': 'HealthsetBambooStd',
+                type: '손글씨'
+            }
+        ];
+
+        function mkfontlist() {
             var _parent_ul = $('.font-box ul');
             var _template = '';
-            for(var i=0; i< fontlist.length; i++){
-                _template += '<li data-font="'+ fontlist[i].code +'" style="font-family:' + fontlist[i].code + '">'+ fontlist[i].name +'</li>';
+            for (var i = 0; i < fontlist.length; i++) {
+                _template += '<li data-font="' + fontlist[i].code + '" style="font-family:' + fontlist[i].code + '">' + fontlist[i].name + '</li>';
             }
             _parent_ul.html(_template);
         }
-        function _change(input,output) {
+
+        function _change(input, output) {
             input.siblings().removeClass('onfa0');
             input.addClass('onfa0');
             var _font = input.attr('data-font');
@@ -30,38 +86,47 @@
         var mainText_li = mainText.children('li');
         var subText = $('.sub-text');
         var subText_li = subText.children('li');
-        mainText_li.on('click',function(){
+        mainText_li.on('click', function () {
             var input = $(this);
-            _change(input,$('.title-box'));
+            _change(input, $('.title-box'));
         });
-        subText_li.on('click',function(){
+        subText_li.on('click', function () {
             var input = $(this);
-            _change(input,$('.infotext-c'));
+            _change(input, $('.infotext-c'));
         });
     }
     /* } 폰트변경 */
-    
+
     /* 정보 입력{ */
-    function inputinfo(){
-        function output(input,output){
+    function inputinfo() {
+        function output(input, output) {
             var inputval = input.val();
             output.text(inputval);
         }
-        function mkcycle(input,output){
+
+        function mkcycle(input, output) {
             var inputcount = input.val();
             var temp = '';
-            for(var i=1; i<=inputcount; i++){
-                temp += '<li class="sboder-box">' + i + '</li>';
+            console.log(inputcount); //test
+            if (inputcount == "?") { //test
+                temp = '<li class="sboder-box" id="unknown-c">?</li>'
+            } else {
+                for (var i = 1; i <= inputcount; i++) {
+                    temp += '<li class="sboder-box">' + i + '</li>';
+                }
             }
-            temp = '<li class="sboder-box sborder-color-box text-c">도입</li>'+temp+'<li class="sboder-box sborder-color-box text-c">클맥</li>';
+            temp = '<li class="sboder-box sborder-color-box text-c">도입</li>' + temp + '<li class="sboder-box sborder-color-box text-c">클맥</li>';
+
+
             output.html(temp);
         }
-        function mkpc(input,output){
+
+        function mkpc(input, output) {
             var inputcount = input.val();
             var temp = '';
-            for(var i=1; i<=inputcount; i++){
+            for (var i = 1; i <= inputcount; i++) {
                 temp += '<li class="scolor-innerbox sshadow-box">\
-                            <div class="pc-name sborder-color-box text-c">PC'+i+'</div>\
+                            <div class="pc-name sborder-color-box text-c">PC' + i + '</div>\
                             <div class="pc-fig sboder-box"></div>\
                             <div class="pc-item sborder-color-box">\
                                 <ul class="text-c">\
@@ -77,25 +142,26 @@
             }
             output.html(temp);
         }
-        
-        output($('#titleTb'),$('.title-box'));
-        output($('#gmplTb'),$('.plgm-name'));
-        output($('#dateTb'),$('.scard-date'));
-        output($('#writerTb'),$('.scard-writer'));
-        output($('input[name="nop"]:checked'),$('.numberp-out'));
-        mkpc($('input[name="nop"]:checked'),$('.pcnumber-out'));
-        output($('input[name="cl"]:checked'),$('.cycle-out'));
-        mkcycle($('input[name="cl"]:checked'),$('.cycleli-out'));
+
+        output($('#titleTb'), $('.title-box'));
+        output($('#gmplTb'), $('.plgm-name'));
+        output($('#dateTb'), $('.scard-date'));
+        output($('#writerTb'), $('.scard-writer'));
+        output($('#stypeTb'), $('.stype-out'));
+        output($('input[name="nop"]:checked'), $('.numberp-out'));
+        mkpc($('input[name="nop"]:checked'), $('.pcnumber-out'));
+        output($('input[name="cl"]:checked'), $('.cycle-out'));
+        mkcycle($('input[name="cl"]:checked'), $('.cycleli-out'));
     }
     /* } 정보입력 끝*/
     /* 모달창 열기 { */
-    function open_modal(){
+    function open_modal() {
         var modalbox = $('.modal-bg');
         inputinfo();
         drawprview();
         modalbox.removeClass('hide');
     }
-    $('.open-modal').on('click',open_modal);
+    $('.open-modal').on('click', open_modal);
     /* } 모달창 열기 */
     /* 검색 {*/
     function imgsearch() {
@@ -128,9 +194,9 @@
                         var data_img = _this.attr('data-img');
                         _this.siblings().removeClass('onborder');
                         _this.addClass('onborder');
-//                        $('.map-imgtag')[0].src = data_img;
-//                        $('.map-imgtag').eq(1)[0].src = data_img;
-                        $('.map-imgtag').each(function(i){
+                        //                        $('.map-imgtag')[0].src = data_img;
+                        //                        $('.map-imgtag').eq(1)[0].src = data_img;
+                        $('.map-imgtag').each(function (i) {
                             $('.map-imgtag').eq(i)[0].src = data_img;
                         })
                         drawprview();
@@ -141,10 +207,11 @@
     }
     /* } 검색 */
     /* 파일 업로드 { */
-    function imgFile(){
+    function imgFile() {
         var file_input = $('#imgFile');
         var map_imgtag = $('.map-imgtag');
         file_input.on('change', handleImgFileSelect);
+
         function handleImgFileSelect(e) {
             var files = e.target.files;
             var filesArr = Array.prototype.slice.call(files);
@@ -162,13 +229,13 @@
                 reader.readAsDataURL(f);
             });
             setTimeout(drawprview, 100);
-        }  
+        }
     }
     /* } 파일 업로드 */
     /* 칼라변경 {*/
     function changeColor() {
         function _change(input, output, prop, option) {
-            var option = option||'';
+            var option = option || '';
             var _color = input.val() + option;
             output.css(prop, _color);
             drawprview();
@@ -176,11 +243,11 @@
         $('#bgColor').on('input', function () {
             _change($(this), $('.scolor-box'), 'backgroundColor', '55');
         });
-        $('#lineColor').on('input', function(){
+        $('#lineColor').on('input', function () {
             _change($(this), $('.sboder-box'), 'borderColor');
             _change($(this), $('.sborder-color-box'), 'backgroundColor');
         });
-        $('#fontColor').on('input', function(){
+        $('#fontColor').on('input', function () {
             _change($(this), $('.text-c'), 'color');
         });
         $('#titlefontColor').on('input', function () {
@@ -225,30 +292,32 @@
         html2canvas($(ori), {
             useCORS: true,
             onrendered: function (canvas) {
-                $('.preview').find('.img-box').find('li').eq(img).find('img')[0].src=canvas.toDataURL("image/png");
+                $('.preview').find('.img-box').find('li').eq(img).find('img')[0].src = canvas.toDataURL("image/png");
             }
         });
     }
-    function drawprview(){
+
+    function drawprview() {
         convert('.map-table', 0);
         convert('.scard', 1);
         convert('.mcard', 2);
     }
     /* 다운로드 {*/
-    function downloadImg(){
+    function downloadImg() {
         var btnDown = $('.btn-download');
-        btnDown.on('click',_down);
+        btnDown.on('click', _down);
+
         function _down(e) {
             e.preventDefault();
             var _this = $(this);
             var _index = _this.parent('li').index();
-            var ori = ['.map-table', '.scard','.mcard'];
+            var ori = ['.map-table', '.scard', '.mcard'];
             var filename = ['맵테이블', '세션카드', '광기카드뒷면'];
             html2canvas($(ori[_index]), {
                 useCORS: true,
                 onrendered: function (canvas) {
                     canvas.toBlob(function (blob) {
-                        saveAs(blob,filename[_index]+'.png');
+                        saveAs(blob, filename[_index] + '.png');
                     });
                 }
             });
@@ -258,7 +327,6 @@
     function init() {
         imgsearch();
         imgFile();
-        changeColor();
         changeFont();
         imgpreview();
         downloadImg();
