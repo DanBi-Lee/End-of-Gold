@@ -1,0 +1,45 @@
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+#excelFile {
+    font-size: 16px;
+    margin: 20px auto;
+    border: 2px solid #fa0;
+    padding: 10px;
+}
+
+.card_madness span.sma {
+    white-space: pre-wrap;
+    word-break: break-all;
+    /* display: inline-block; */
+}
+
+
+
+.cardUL { width: 100%; height: 1px; overflow:auto; opacity: 0; position: relative; z-index: -999; text-align: center; }
+.cardUL>li { /*width:300px; height: 500px; background-color: #eee; border-radius: 10px; margin: 10px; padding: 10px; box-sizing: border-box; border: 1px solid #000;*/ position: absolute; top:0; left:0;}
+.cardUL>li p{width: 100%; word-break: keep-all; padding: 20px; box-sizing: border-box; /*letter-spacing: 2; line-height: 1.4; white-space : pre-wrap;*/ text-align: center;}
+ul, li{ list-style: none; letter-spacing: 4; line-height: 1.4;}
+button {
+    display: inline-block;
+    width: 120px;
+    height: 40px;
+    background: #ddd;
+    border-radius: 4px;
+}
+
+button:first-of-type {
+    margin-right: 10px;
+    background-color: #fa0;
+}
+
+button.btn_down {
+    margin: 0px auto;
+    margin-top: 40px;
+}
+
+/* .preview{ width: 1000px; } */
+.previewCardUL{ max-width: 600px; display: flex; overflow-x: auto; padding: 20px; box-sizing: border-box; border: 1px solid #ddd; border-radius: 10px 10px 0px 0px; }
+.previewCardUL > li { margin-right: 10px; }

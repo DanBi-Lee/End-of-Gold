@@ -14,12 +14,13 @@
     <link rel="stylesheet" href="./css/me_handout.css">
     <link rel="shortcut icon" href="img/favicon.png">
     <script src="./script/common/jquery-3.3.1.min.js"></script>
+    <script src="./script/common/jquery.fittext.js"></script>
     <script src="./script/common/html2canvas-0.4.1.min.js"></script>
+    <script src="./script/common/dom-to-image.js"></script>
     <script src="./script/common/fileSaver-1.3.8.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.14.3/xlsx.full.min.js">
+    <script src="./script/common/xlsx.full.min.js">
     </script>
-    <script type="text/javascript" src="jszip.min.js"></script>
-    <!--    <script src='//js.zapjs.com/js/download.js'></script>-->
+    <script src="./script/common/jszip.min.js"></script>
     <title>황금의끝자락-광기카드</title>
 </head>
 
@@ -30,7 +31,7 @@
     <nav class="gnb">
         <ul class="inner_a">
             <li class="on">
-                <a href="#">광기카드 생성기</a>
+                <a href="./index.html">광기카드 생성기</a>
             </li>
             <li>
                 <a href="./orpgHO/index.html">Roll20용 핸드아웃</a>
@@ -44,6 +45,12 @@
         <input type="file" id="excelFile" onchange="excelExport(event)" />
         <ul class="cardUL">
         </ul>
+        <div class="preview">
+            <ul class="previewCardUL">
+                <li>↑ 엑셀 파일을 선택해주세요</li>
+            </ul>
+        </div>
+        <button class="btn_down" onclick="create_zip()" >일괄 다운로드</button>
         <input type="button" class="btn_down" onclick="create_zip()" value="광기 이미지 일괄 다운로드">
     </main>
     <script src="./script/common/common.js"></script>
