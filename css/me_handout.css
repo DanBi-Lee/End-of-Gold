@@ -18,7 +18,7 @@ main {
 
 
 
-.cardUL { width: 100%; height: 1px; overflow:auto; opacity: 0; position: relative; z-index: -999; text-align: center; }
+.cardUL { width: 100%; height: 1px; overflow:auto; opacity: 0; position: fixed; z-index: -999; text-align: center; top: 0px; left:0px; }
 .cardUL>li { /*width:300px; height: 500px; background-color: #eee; border-radius: 10px; margin: 10px; padding: 10px; box-sizing: border-box; border: 1px solid #000;*/ position: absolute; top:0; left:0;}
 .cardUL>li p{width: 100%; word-break: keep-all; padding: 20px; box-sizing: border-box; /*letter-spacing: 2; line-height: 1.4; white-space : pre-wrap;*/ text-align: center;}
 ul, li{ list-style: none; letter-spacing: 4; line-height: 1.4;}
