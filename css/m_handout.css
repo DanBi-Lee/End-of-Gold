@@ -169,3 +169,15 @@ main {
 }
 
 .spansma{display: flex;}
+
+.link_box {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.link {
+    display: inline-block;
+    margin: 20px;
+    border: 1px solid;
+    padding: 4px;
+}
